@@ -11,5 +11,5 @@ from model.user_model import user_model
 # it is used to bind a function to a URL
 
 def user_getall_controller():
-    return user_model().user_signup_model()
+    return user_model().user_getall_controller()
 
