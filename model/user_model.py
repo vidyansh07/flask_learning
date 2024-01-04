@@ -26,3 +26,13 @@ class user_model:
             return json.dumps(result)
         else:
             return "no data found"
+        
+    
+    def user_addone_controller(self, data):
+        # Connector establish code
+        # Query execution code
+        self.cur.execute(f"INSERT INTO users(name, email, phone, role, password ) VALUES('{data['name']}', '{data['email']}', '{data['phone']}', '{data['role']}', '{data['password']}')")
+        
+        # Fetching the result
+        
+        return "User created successfully"
