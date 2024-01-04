@@ -7,7 +7,7 @@ class user_model:
         # Connector establish code
         try :
             self.con = mysql.connector.connect(host="localhost",user= "root", password ="agtma",database ="flask_tutorial")
-            self.cur = self.con.cursor(dictionary = True)
+            self.cur = self.con.cursor(dictionary=True)
             
             print("connection successful")
         except:
@@ -32,7 +32,4 @@ class user_model:
         # Connector establish code
         # Query execution code
         self.cur.execute(f"INSERT INTO users(name, email, phone, role, password ) VALUES('{data['name']}', '{data['email']}', '{data['phone']}', '{data['role']}', '{data['password']}')")
-        
-        # Fetching the result
-        
         return "User created successfully"
